@@ -8,14 +8,22 @@
 </head>
 <body>
     
-    <h1 class="title">PC Game Picker</h1>
-    <p>This is a simple random game generator for your Steam library. Please enter your Steam ID or Profle URL.</p>
-    <div class="input"> <a href="https://store.steampowered.com/"><img src="/Images/steam-logo-transparent.png" alt="SteamLogo"> </a>       
+    <h1 class="title">PC Game Selector</h1>
+    <p>A simple random game generator for your Steam library.<br>Please enter your Steam ID or Profile URL.</br></p>
+    <div class="input"> <a href="https://store.steampowered.com/"><img src="/Images/steam-logo-transparent.png" alt="SteamLogo"> </a>
+        <button class="Button" onclick="handleClick()">Click Here.</button>            
     <input id="LoginInput" name="steamid" onblur="this.placeholder = `Enter SteamID or Profile URL Here`">    
     </div>
     <!-- <div class="Button">
 <button>Try Again?</button>
     </div> -->
+    
 <script src="script.js"></script>
+<script type="module">
+    import{
+        handleClick
+    } from "./script.js"
+    handleClick()
+</script>
 </body>
 </html>
