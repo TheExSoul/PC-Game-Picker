@@ -1,20 +1,17 @@
+import { apiKey } from "./config.js";
 
+// Seeing if I have connected my script.js correctly
 
-export function handleClick() {
-    console.log("hello")
-}
+console.log("hello")
 
-// console.log('hello')
-
+// calling RAWG.io API to display list of games
 async function fetchGames() {
-const result = fetch(`https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=ECC9AA477EA7038A7632378B2507747D&steamid=76561198168567037&format=json&include_appinfo=true`, 
-{method: "GET"});
-    
+const result = await fetch(`https://api.rawg.io/api/platforms?key=${apiKey}`);
     console.log(result);
 }
 
  fetchGames();
 
-// var steamid = document.getElementById()
+
 
 
