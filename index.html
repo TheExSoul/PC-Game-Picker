@@ -9,14 +9,24 @@
 <body>
     
     <h1 class="title">PC Game Selector</h1>
-    <p>A simple random game generator for your Steam library.<br>Please enter your Steam ID or Profile URL.</br></p>
-    <div class="input"> <a href="https://store.steampowered.com/"><img src="/Images/steam-logo-transparent.png" alt="SteamLogo"> </a>
-        <button class="Button" onclick="handleClick()">Click Here.</button>            
-    <input id="LoginInput" name="steamid" onblur="this.placeholder = `Enter SteamID or Profile URL Here`">    
+    <p>A simple random game generator. Please select from the following dropdown menus to get a random game.</p>
+    <div class="input"> 
+    <select id="genres">
+        <option value="" disabled selected>Select Genre</option>
+    </select>
+    <select id="stores">
+        <option value="" disabled selected>Select Store</option>
+    </select>  
+    <select id="platforms">
+        <option value="" disabled selected>Select Platform</option>
+    </select>
+    <input type="number" min="0" max="100" placeholder="1-100">
     </div>
-    <!-- <div class="Button">
-<button>Try Again?</button>
-    </div> -->
+    </div>
+    <div>
+        <button id="generateUrlButton">Click here to get a random game</button>
+    </div>
+    
     
 <script type="module" src="script.js"></script>
 </body>
