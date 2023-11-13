@@ -8,8 +8,8 @@
 </head>
 <body>
     
-    <h1 class="title">PC Game Selector</h1>
-    <p>A simple random game generator. Please select from the following dropdown menus to get a random game.</p>
+    <header class="title">PC Game Selector</header>
+    <p class="instructions">A simple random game generator. Please select from the following dropdown menus to get a random game.</p>
     <div class="input"> 
     <select id="genres">
         <option value="" disabled selected>Select Genre</option>
@@ -20,14 +20,18 @@
     <select id="platforms">
         <option value="" disabled selected>Select Platform</option>
     </select>
-    <input type="number" min="0" max="100" placeholder="1-100">
+    <input id="metacritic" type="number" min="0" max="100" placeholder="1-100">
     </div>
     </div>
-    <div>
+    <div id="randomGameContainer">
+        
+    </div>
+    <div class="button">
         <button id="generateUrlButton">Click here to get a random game</button>
-    </div>
-    
-    
+</div>
+
+<footer><p>&copy; 2023 Michael Garcia</p>
+</footer>
 <script type="module" src="script.js"></script>
 </body>
 </html>
