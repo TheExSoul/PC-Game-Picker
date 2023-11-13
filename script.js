@@ -25,7 +25,7 @@ async function fetchStores() {
     let storesDropdown = document.getElementById('stores');
     let storesResponseObject = await storesResponse.json();
     let options = storesResponseObject.results;
-    let excludedStores = [9, 11]
+    let excludedStores = [4,7,8,9,]
     for (let option of options) {
         if (!excludedStores.includes(option.id) ) {
             let optionToAdd = document.createElement('option');
@@ -44,12 +44,15 @@ async function fetchPlatform() {
     let platformsDropdown = document.getElementById('platforms');
     let platformsResponseObject = await platformsResponse.json();
     let options = platformsResponseObject.results;
-    for (let option of options) {
+    let excludedPlatforms = [9,10,11,12,13,14,17,19,22,23,25,26,27,28,31,34,41,43,46,49,50,55,80,74,77,79,106,107,111,112,117,119,166,167]
+    for (let option of options){
+    if (!excludedPlatforms.includes(option.id) ) {
         let optionToAdd = document.createElement('option');
         optionToAdd.innerHTML = option.name;
         optionToAdd.value = option.id
         platformsDropdown.appendChild(optionToAdd);
     }
+}
 }
 fetchPlatform();
 // building the api based on inputs from user
@@ -83,7 +86,7 @@ async function fetchGames() {
     let randomNumber = Math.floor(Math.random() * gamesList.length);
     let randomGame = gamesList[randomNumber]
     console.log(randomGame)
-
+    
     
 }
  
