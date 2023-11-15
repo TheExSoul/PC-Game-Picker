@@ -86,8 +86,19 @@ async function fetchGames() {
     let randomNumber = Math.floor(Math.random() * gamesList.length);
     let randomGame = gamesList[randomNumber]
     console.log(randomGame)
-    
-    
+   
+    document.getElementById('randomGameContainer').innerHTML ='';
+
+    let gameNameElement = document.createElement('p');
+    gameNameElement.innerHTML = randomGame.name;
+
+    let gamePictureElement = document.createElement('img');
+    gamePictureElement.src = randomGame.background_image;
+    gamePictureElement.alt = randomGame.name;
+
+    document.getElementById('randomGameContainer').appendChild(gameNameElement);
+    document.getElementById('randomGameContainer').appendChild(gamePictureElement);
+
 }
  
 document.getElementById('generateUrlButton').addEventListener('click', fetchGames)
