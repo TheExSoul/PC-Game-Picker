@@ -25,6 +25,8 @@ async function fetchStores() {
     let storesDropdown = document.getElementById('stores');
     let storesResponseObject = await storesResponse.json();
     let options = storesResponseObject.results;
+
+// this is me excluding niche storefronts    
     let excludedStores = [4,7,8,9,]
     for (let option of options) {
         if (!excludedStores.includes(option.id) ) {
@@ -44,6 +46,9 @@ async function fetchPlatform() {
     let platformsDropdown = document.getElementById('platforms');
     let platformsResponseObject = await platformsResponse.json();
     let options = platformsResponseObject.results;
+
+// this is me manually exluding platforms that are outed or not used frequently
+
     let excludedPlatforms = [9,10,11,12,13,14,17,19,22,23,25,26,27,28,31,34,41,43,46,49,50,55,80,74,77,79,106,107,111,112,117,119,166,167]
     for (let option of options){
     if (!excludedPlatforms.includes(option.id) ) {
@@ -62,6 +67,9 @@ async function fetchGames() {
     let platforms = document.getElementById('platforms').value;
     let metacritic = document.getElementById('metacritic').value;
     let apiUrl = `https://api.rawg.io/api/games?key=${apiKey}&page_size=50`
+
+// adding an option if user decides not to select parameters 
+
     if (genres){
         apiUrl = apiUrl+`&genres=${genres}`   
     }
@@ -73,6 +81,8 @@ async function fetchGames() {
         apiUrl = apiUrl+`&stores=${stores}`
         
     }
+
+// this is so the user can choose one metacritic score. Rawg api requires a user to select two numbers between 1 and 100.    
     if (metacritic){
         apiUrl = apiUrl+`&metacritic=${metacritic},100`
         
@@ -87,6 +97,8 @@ async function fetchGames() {
     let randomGame = gamesList[randomNumber]
     console.log(randomGame)
    
+// adding the name of the game and image associated for the game
+
     document.getElementById('randomGameContainer').innerHTML ='';
 
     let gameNameElement = document.createElement('p');

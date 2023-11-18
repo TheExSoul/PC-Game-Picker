@@ -63,9 +63,6 @@
      margin-bottom: 10px;
  }
 
- ::placeholder {
-     color: #0E141B;
- }
 
  .input {
      display: flex;
@@ -173,6 +170,13 @@
      color: #333;
      font-size: 16px;
      box-sizing: border-box;
+ }
+
+
+ #errorMessage {
+     color: red;
+     font-size: 16px;
+     margin-top: 10px;
  }
 
  @media screen and (max-width: 600px) {
