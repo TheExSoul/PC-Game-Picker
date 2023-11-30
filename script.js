@@ -101,7 +101,7 @@ async function fetchGames() {
 
     document.getElementById('randomGameContainer').innerHTML ='';
 
-    let gameNameElement = document.createElement('p');
+    let gameNameElement = document.createElement('h2');
     gameNameElement.innerHTML = randomGame.name;
 
     let gamePictureElement = document.createElement('img');
@@ -110,7 +110,7 @@ async function fetchGames() {
 
     document.getElementById('randomGameContainer').appendChild(gameNameElement);
     document.getElementById('randomGameContainer').appendChild(gamePictureElement);
-
+    
 }
  
 document.getElementById('generateUrlButton').addEventListener('click', fetchGames)

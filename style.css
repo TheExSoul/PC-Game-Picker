@@ -15,7 +15,7 @@
  }
 
  .instructions {
-     display: flex;
+     display: block;
      color: #f0f0f0;
      text-shadow:
          -1px -1px 0 #000,
@@ -26,12 +26,17 @@
      padding: 20px;
      text-align: center;
      font-size: 50px;
+     line-height: 1.5;
+ }
+ .instructions p {
+    display: block;
+    margin-bottom: 10px;
  }
 
  body {
      background: #3D4450;
      color: white;
-     background: linear-gradient(to bottom right, #ab4513, #1379ab);
+     background: linear-gradient(to bottom, #ab4513, #1379ab);
      min-height: 100%;
      margin-bottom: 40px;
  }
@@ -57,10 +62,15 @@
  }
 
  #generateUrlButton {
-     background-color: #417a9b;
-     height: 40px;
-     margin-top: 10px;
-     margin-bottom: 10px;
+    width: 200px;
+    padding: 10px;
+    margin: 10px 0;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #2196f3;
+    color: #333;
+    font-size: 16px;
  }
 
 
@@ -71,8 +81,8 @@
      color: #0E141B;
      text-align: center;
      height: 50px;
-     margin: 20px 0;
-     padding: 20px;
+     margin: 10px 0;
+     padding: 10px;
 
  }
 
@@ -95,10 +105,11 @@
  }
 
  footer {
-     position: relative;
-     justify-content: baseline;
-     padding: 10px;
-     bottom: 0;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     padding: 20px;
+     margin: 40px 0;
      width: 100%;
      height: 40px;
      text-align: center;
@@ -113,12 +124,12 @@
 
  }
 
- #randomGameContainer p {
+  #randomGameContainer h2 {
      font-size: 30px;
      font-weight: bold;
      color: #333;
      margin-bottom: 10px;
- }
+ } 
 
  #randomGameContainer img {
      max-width: 100%;
@@ -131,15 +142,15 @@
  #genres,
  #stores,
  #platforms {
-     width: 200px;
-     padding: 10px;
-     margin: 10px 0;
+     width: 100%;
+     padding: 8px;
+     margin: 8px 0;
      margin-right: 10px;
      border: 1px solid #ccc;
      border-radius: 5px;
-     background-color: #fff;
+     background-color: #4caf50;
      color: #333;
-     font-size: 16px;
+     font-size: 14px;
  }
 
  #genres option,
@@ -160,17 +171,17 @@
      right: 10px;
  }
 
- #metacritic {
+  #metacritic {
      width: 100px;
      padding: 10px;
      margin: 10px 0;
      border: 1px solid #ccc;
      border-radius: 5px;
-     background-color: #fff;
+     background-color: #4caf50;
      color: #333;
      font-size: 16px;
      box-sizing: border-box;
- }
+ } 
 
 
  #errorMessage {
@@ -184,13 +195,40 @@
          flex-direction: column;
          align-items: center;
      }
+     .input select,
+     .input input{
+        width: 100%;
+        margin: 10px 0;
+        margin-right: 0;
+     }
 
      #genres,
      #stores,
      #platforms,
      #metacritic {
-         width: 100%;
-         margin: 10px 0;
+         width: 90%;
+         margin: 10px auto;
+         font-size: 16px;
+     } 
+
+     #genres option,
+     #stores option,
+     #platforms option {
+        white-space: normal;
+        width: 100%;
      }
+
+     header {
+        font-size: 36px; 
+    }
+
+    footer {
+        margin: 20px 0; 
+    }
+
+    .title {
+        font-size: 36px; 
+    }
+
 
  }
