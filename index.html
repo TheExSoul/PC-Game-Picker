@@ -10,8 +10,7 @@
 
 <body>
     <header class="title">Video Game Selector</header>
-    <p class="instructions">Please select your parameters from the following dropdown
-        menus to get a random game. You can also further filter your selection by putting in a Metacritic score. Type a number from 1-100, and a game will generate from a score higher then your number. This will also work if nothing is selected. </p>
+    <p class="instructions">Choose parameters from dropdown menus to generate a random game. Filter by entering a Metacritic score (1-100) for games with higher scores. Works even if no selection is made. </p>
     <div class="input">
         <select id="genres">
             <option value="">Select Genre</option>
@@ -22,7 +21,7 @@
         <select id="platforms">
             <option value="">Select Platform</option>
         </select>
-        <input id="metacritic" type="number" min="0" max="100" placeholder="Metacritic Score">
+        <input id="metacritic" type="number" min="0" max="100" placeholder="Score">
     </div>
     </div>
     <div id="randomGameContainer">
