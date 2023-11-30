@@ -6,7 +6,6 @@
  }
 
 
-
  html {
      box-sizing: border-box;
      margin: 0;
@@ -191,32 +190,29 @@
  }
 
  @media screen and (max-width: 600px) {
-     input {
+
+     .instructions{
+        margin-bottom: 20px; 
+        padding: 10px; 
+        font-size: 24px;
+    }
+    
+     .input {
          flex-direction: column;
          align-items: center;
+         margin-top: 50px;
+         margin-bottom: 50px;
+         padding-top: 50px;
+         padding-bottom: 50px;
      }
-     .input select,
-     .input input{
-        width: 100%;
-        margin: 10px 0;
-        margin-right: 0;
-     }
-
      #genres,
      #stores,
      #platforms,
      #metacritic {
          width: 90%;
-         margin: 10px auto;
-         font-size: 16px;
+         margin: 10px 0;
+         margin-right: 0;
      } 
-
-     #genres option,
-     #stores option,
-     #platforms option {
-        white-space: normal;
-        width: 100%;
-     }
 
      header {
         font-size: 36px; 
@@ -228,6 +224,13 @@
 
     .title {
         font-size: 36px; 
+    }
+    .button {
+        margin-top: 20px;
+    }
+    #generateUrlButton {
+        margin-top: 20px; 
+        width: 90%; 
     }
 
 
